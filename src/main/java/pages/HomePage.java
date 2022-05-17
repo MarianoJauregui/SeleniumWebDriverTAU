@@ -16,6 +16,11 @@ public class HomePage {
         this.driver = driver;
     }
 
+    //Generic Method so it does not return anything.
+    private void clickLink(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
     public LoginPage clickFormAuthentication() {
         clickLink("Form Authentication");
         //driver.findElement(formAuthenticationLink).click();
@@ -27,14 +32,15 @@ public class HomePage {
         return new DropdownPage(driver);
     }
 
-    //Generic Method so it does not return anything.
-    private void clickLink(String linkText){
-        driver.findElement(By.linkText(linkText)).click();
-    }
 
     public HoversPage clickHovers(){
         clickLink("Hovers");
         return new HoversPage(driver);
+    }
+
+    public KeyPressesPage clickKeyPresses() {
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
     }
 
 }
