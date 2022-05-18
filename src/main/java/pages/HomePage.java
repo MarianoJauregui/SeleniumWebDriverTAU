@@ -32,7 +32,6 @@ public class HomePage {
         return new DropdownPage(driver);
     }
 
-
     public HoversPage clickHovers(){
         clickLink("Hovers");
         return new HoversPage(driver);
@@ -42,5 +41,16 @@ public class HomePage {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
     }
+
+    public AlertsPage clickJavaScriptAlerts(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
+    public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
 
 }
